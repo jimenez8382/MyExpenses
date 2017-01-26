@@ -1,0 +1,9 @@
+D:\Project\MyExpenses\Data\bin\Debug\Data.dll.config
+D:\Project\MyExpenses\Data\bin\Debug\Data.dll
+D:\Project\MyExpenses\Data\bin\Debug\Data.pdb
+D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.dll
+D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.xml
+D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\MyExpenses\Data\obj\Debug\Data.dll
+D:\Project\MyExpenses\Data\obj\Debug\Data.pdb

@@ -1,0 +1,12 @@
+D:\Project\MyExpenses\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+D:\Project\MyExpenses\Services\bin\Debug\Services.dll.config
+D:\Project\MyExpenses\Services\bin\Debug\Services.dll
+D:\Project\MyExpenses\Services\bin\Debug\Services.pdb
+D:\Project\MyExpenses\Services\bin\Debug\Data.dll
+D:\Project\MyExpenses\Services\bin\Debug\EntityFramework.dll
+D:\Project\MyExpenses\Services\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project\MyExpenses\Services\bin\Debug\Data.pdb
+D:\Project\MyExpenses\Services\bin\Debug\EntityFramework.xml
+D:\Project\MyExpenses\Services\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project\MyExpenses\Services\obj\Debug\Services.dll
+D:\Project\MyExpenses\Services\obj\Debug\Services.pdb

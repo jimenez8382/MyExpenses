@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Data.Models.Expenses>
+@{  Layout = null;
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <table id="data-table-row-grouping" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr id="@item.Id">
+                    <td>@item.Description</td>
+                    <td>@item.Date.ToShortDateString()</td>
+                    <td style="text-align:right">@String.Format("{0:C0} ", @item.Amount)</td>
+                    <td style="text-align:right">
+                        <a href="@Url.Action("Edit", "Home" , new { Id=@item.Id })"><i class="Small material-icons">mode_edit</i></a>
+                        <a class="delete" onclick="return confirm('Are you sure want to delete this?');" href="@Url.Action("Delete", "Home" , new { Id=@item.Id })"><i class="Small material-icons">delete</i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#data-table-row-grouping').DataTable({
+            columnDefs: [{ type: 'currency', targets: 2 }],
+            "createdRow": function (row, data, index) {
+            }
+        });
+});
+</script>
+
+
