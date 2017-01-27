@@ -14,10 +14,14 @@ namespace MyExpenses
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default" ,
+                name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Expenses", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               "Report", // Route name
+               "{controller}/{action}/{FiscalYear}", // URL with parameters
+               new { area = "", controller = "Report", action = "Index", FiscalYear = UrlParameter.Optional });
         }
     }
 }

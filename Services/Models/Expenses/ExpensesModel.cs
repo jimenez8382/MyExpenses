@@ -19,10 +19,22 @@ namespace Services.Models.Expenses
         [Required]
         [Display(Name = "Expenses")]
         [Range(1, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
-        public double Expenses { get; set; }
+        public double Amount { get; set; }
 
         [Required]
         [Display(Name = "Decription")]
-        public string Decription { get; set; }
+        public string Description { get; set; }
+    }
+
+    public class ExpenseReport
+    {
+        public ExpenseReport()
+        {
+            Report = new List<ExpenseItem>();
+        }
+        [Required]
+        [Display(Name = "Fiscal Year")]
+        public int FiscalYear { get; set; }
+        public List <ExpenseItem> Report { get; set; }
     }
 }

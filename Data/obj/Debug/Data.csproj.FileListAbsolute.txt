@@ -7,3 +7,4 @@ D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.xml
 D:\Project\MyExpenses\Data\bin\Debug\EntityFramework.SqlServer.xml
 D:\Project\MyExpenses\Data\obj\Debug\Data.dll
 D:\Project\MyExpenses\Data\obj\Debug\Data.pdb
+D:\Project\MyExpenses\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache

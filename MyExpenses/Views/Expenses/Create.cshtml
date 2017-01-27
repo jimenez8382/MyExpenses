@@ -28,15 +28,15 @@
                 </div>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">attach_money</i>
-                    @Html.TextBoxFor(x => x.Expenses, new { type = "number" })
-                    @Html.LabelFor(x => x.Expenses, new { @data_error = "wrong", @data_success = "Ok" })
+                    @Html.TextBoxFor(x => x.Amount, new { type = "number" })
+                    @Html.LabelFor(x => x.Amount, new { @data_error = "wrong", @data_success = "Ok" })
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="material-icons prefix">comment</i>
                     @Html.TextArea("Decription", new { @id = "Decription", @class = "materialize-textarea", })
-                    @Html.LabelFor(x => x.Decription, new { @data_error = "wrong", @data_success = "Ok" })
+                    @Html.LabelFor(x => x.Description, new { @data_error = "wrong", @data_success = "Ok" })
                 </div>
             </div>
             <div class="row">

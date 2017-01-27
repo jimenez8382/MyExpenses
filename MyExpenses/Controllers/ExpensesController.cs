@@ -52,9 +52,9 @@ namespace MyExpenses.Controllers
             var item = _service.GetItem(Id);
             var editIt = new ExpenseItem
             {
-                Expenses = item.Amount,
+                Amount = item.Amount,
                 Date = item.Date,
-                Decription = item.Description,
+                Description = item.Description,
                 ExpensesId = item.Id
             };
             return View(editIt);

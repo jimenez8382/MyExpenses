@@ -46,8 +46,8 @@ namespace Services
             {
                 var Expense = new Expenses()
                 {
-                    Amount = model.Expenses,
-                    Description = model.Decription,
+                    Amount = model.Amount,
+                    Description = model.Description,
                     Date = model.Date
                 };
                 _db.Expenses.Add(Expense);
@@ -72,8 +72,8 @@ namespace Services
             var Expense = new Expenses()
             {
                 Id = model.ExpensesId,
-                Amount = model.Expenses,
-                Description = model.Decription,
+                Amount = model.Amount,
+                Description = model.Description,
                 Date = model.Date
             };
             // find the record to update
