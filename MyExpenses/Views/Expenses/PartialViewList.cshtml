@@ -22,8 +22,8 @@
                     <td>@item.Date.ToShortDateString()</td>
                     <td style="text-align:right">@String.Format("{0:C0} ", @item.Amount)</td>
                     <td style="text-align:right">
-                        <a href="@Url.Action("Edit", "Home" , new { Id=@item.Id })"><i class="Small material-icons">mode_edit</i></a>
-                        <a class="delete" onclick="return confirm('Are you sure want to delete this?');" href="@Url.Action("Delete", "Home" , new { Id=@item.Id })"><i class="Small material-icons">delete</i></a>
+                        <a href="@Url.Action("Edit", "Expenses" , new { Id=@item.Id })"><i class="Small material-icons">mode_edit</i></a>
+                        <a class="delete" onclick="return confirm('Are you sure want to delete this?');" href="@Url.Action("Delete", "Expenses" , new { Id=@item.Id })"><i class="Small material-icons">delete</i></a>
                     </td>
                 </tr>
             }

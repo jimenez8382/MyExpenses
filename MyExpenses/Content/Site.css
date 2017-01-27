@@ -13,6 +13,47 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 100%;
 }
 
+/* Notification styles
+    -----------------------------------------------------------*/
+.notificationbox {
+    z-index: 1000;
+    padding: 12px 10px 10px 30px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px #000;
+    display: none;
+    width: 550px;
+}
+
+.notibox-success {
+    color: #060;
+    background: #04f710 url(../../Content/Notifications/Images/ok.gif) no-repeat 8px 12px;
+}
+
+.notibox-error {
+    color: #c00;
+    background: #fcc url(../../Content/Notifications/Images/fail.gif) no-repeat 8px 12px;
+}
+
+.notibox-warning {
+    color: #c60;
+    background: #ffc url(../../Content/Notifications/Images/warn.gif) no-repeat 8px 12px;
+}
+
+.delete {
+    color: #ee6e73 !important;
+}
+
+.page-footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+}
+
+.highlight {
+    text-align: right;
+}

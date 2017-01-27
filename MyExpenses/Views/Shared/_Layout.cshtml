@@ -10,55 +10,10 @@
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="http://demo.geekslabs.com/materialize/v3.1/js/plugins/data-tables/css/jquery.dataTables.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen,projection" />
-
     <link type="text/css" rel="stylesheet" href="~/Scripts/materializeMessages.css" media="screen,projection" />
-
     <link rel="icon" type="image/png" href="~/Content/img/money-logo.png" />
     <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <style>
-        /* Notification styles
-            -----------------------------------------------------------*/
-        .notificationbox {
-            z-index: 1000;
-            padding: 12px 10px 10px 30px;
-            margin-top: 10px;
-            box-shadow: 5px 5px 10px #000;
-            display: none;
-            width: 550px;
-        }
-
-        .nb-success {
-            color: #060;
-            background: #2cc534 url(../../Content/Notifications/Images/ok.gif) no-repeat 8px 12px;
-        }
-
-        .nb-error {
-            color: #c00;
-            background: #fcc url(../../Content/Notifications/Images/fail.gif) no-repeat 8px 12px;
-        }
-
-        .nb-warning {
-            color: #c60;
-            background: #ffc url(../../Content/Notifications/Images/warn.gif) no-repeat 8px 12px;
-        }
-
-        .delete {
-            color: #ee6e73 !important;
-        }
-
-        .page-footer {
-            right: 0;
-            bottom: 0;
-            left: 0;
-            padding: 1rem;
-            background-color: #efefef;
-        }
-
-        .highlight {
-            text-align: right;
-        }
-    </style>
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="light-blue lighten-1" role="navigation">
@@ -82,7 +37,7 @@
     <div class="container">
         @if (TempData["Notification"] != null)
         {
-            <div id="NotificationBox" class="@TempData["NotificationCSS"]" style="display: none">
+            <div id="NotificationBox" class="@TempData["NotificationClass"]" style="display: none">
                 @TempData["Notification"]
             </div>
         }
@@ -124,8 +79,6 @@
     </footer>
     <!--  Scripts-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-
     <script src="~/Scripts/materializeMessages.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="http://materializecss.com/js/init.js"></script>
@@ -137,6 +90,6 @@
      //Used to display and close the system notifications
      $(document).ready(function () {
         $("#NotificationBox").fadeIn(500);
-        $("#NotificationBox").delay(2000).slideUp(1000);
+        $("#NotificationBox").delay(5000).slideUp(5000);
     });
 </script>
