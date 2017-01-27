@@ -14,8 +14,8 @@ namespace MyExpenses.Controllers
         }
         public ActionResult Index()
         {
+            // return the complete Expense List
             return View(_service.GetExpenses());
-
         }
 
         [HttpGet]
@@ -26,20 +26,16 @@ namespace MyExpenses.Controllers
         [HttpPost]
         public ActionResult Create(ExpenseItem model)
         {
-          
-            ////To display an error use
-            //this.TempData["NotificationCSS"] = "notificationbox nb-error";
-
-            ////To display a warning use
-            //this.TempData["NotificationCSS"] = "notificationbox nb-warning";
             try
             {
                 var itemAdded = _service.AddItem(model);
+                // Adding succesful message 
                 this.TempData["Notification"] = "Your record was created successfully.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-success";
             }
             catch (Exception ex)
             {
+                //adding error message
                 this.TempData["Notification"] = "We had a problem to save your Record,Verify your information and try again.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-error";
             }
@@ -63,13 +59,13 @@ namespace MyExpenses.Controllers
         public ActionResult Edit(ExpenseItem model)
         {
             try
-            {
+            { // Adding succesful message 
                 var item = _service.EditItem(model);
                 this.TempData["Notification"] = "Your record was updated successfully.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-success";
             }
             catch (Exception ex)
-            {
+            { //adding error message
                 this.TempData["Notification"] = "We had a problem to Update your Record,Verify your information and try again.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-error";
             }
@@ -82,11 +78,12 @@ namespace MyExpenses.Controllers
             try
             {
                 var item = _service.DeleteItem(Id);
+                // Adding succesful message 
                 this.TempData["Notification"] = "Your record was deleted successfully.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-success";
             }
             catch (Exception ex)
-            {
+            { // Adding error message 
                 this.TempData["Notification"] = "We had a problem to delete your Record,try again.";
                 this.TempData["NotificationClass"] = "notificationbox notibox-error";
             }

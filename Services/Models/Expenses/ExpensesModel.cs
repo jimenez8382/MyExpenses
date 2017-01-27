@@ -34,6 +34,7 @@ namespace Services.Models.Expenses
         }
         [Required]
         [Display(Name = "Fiscal Year")]
+        [Range(1, int.MaxValue, ErrorMessage = "Please enter a value bigger than {1}")]
         public int FiscalYear { get; set; }
         public List <ExpenseItem> Report { get; set; }
     }
