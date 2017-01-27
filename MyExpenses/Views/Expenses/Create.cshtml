@@ -1,0 +1,89 @@
+﻿@model Services.Models.Expenses.ExpenseItem
+@{
+    <script src="@Url.Content("~/Scripts/jquery.validate-vsdoc.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <head>
+    <style>
+        .rowAdded {
+            background-color: darkseagreen;
+        }
+    </style>
+    </head>
+}
+<form id="form-myExpenses" action="@Url.Action("Create")" method="POST" enctype="multipart/form-data" class="col s12">
+    <div class="row">
+        <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+            </div>
+        </nav>
+        <div class="card-panel">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">perm_contact_calendar</i>
+                    @Html.TextBoxFor(x => x.Date, new { type = "date", @class = "datepicker validate", @required = "", @aria_required = "true" })
+                    @Html.LabelFor(x => x.Date, new { @data_error = "wrong", @data_success = "Ok" })
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">attach_money</i>
+                    @Html.TextBoxFor(x => x.Expenses, new { type = "number" })
+                    @Html.LabelFor(x => x.Expenses, new { @data_error = "wrong", @data_success = "Ok" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">comment</i>
+                    @Html.TextArea("Decription", new { @id = "Decription", @class = "materialize-textarea", })
+                    @Html.LabelFor(x => x.Decription, new { @data_error = "wrong", @data_success = "Ok" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input class="btn cyan waves-effect waves-light right" type="submit" value="Save" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+        $(".datepicker").val("");
+        @*$('#form-myExpenses').submit(function (e) {
+            if ($(this).valid()) {
+                var resourceUrl = '@Url.Action("Create", "Home", new { area = "" })';
+                $.ajax({
+                    url: resourceUrl,
+                    type: 'POST',
+                    data: new FormData(this),
+                    processData: false,
+                    contentType: false,
+                    success: function (result)
+                    {
+                        var rowIndex = $('#data-table-row-grouping').dataTable().fnAddData([$("#Decription").val(), result.Date, result.Amount]);
+                        var row = $('#data-table-row-grouping').dataTable().fnGetNodes(rowIndex);
+                        $(row).attr('id',result.ExpensesId);
+                        $('.modal').modal("close");
+                        $(row).className = "rowAdded";
+                        toastr.success("The information has added succesfully", "Save", {
+                            "positionClass": "toast-top-full-width",
+                        });
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        toastr.error(errorThrown, "Save");
+                    }
+                }).fail(function (msg) {
+                });
+            }
+            return false;
+        });*@
+});
+</script>
+
+
